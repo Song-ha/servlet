@@ -26,7 +26,7 @@ public class BoardDao {
 
 		// 글번호
 		writeNumber(boardDto, conn);
-
+		
 		try {
 			String sql = "insert into board(board_number,writer,subject,"
 					+ "email, content,password,write_date,read_count," + "group_number,sequence_number,sequence_level)"
@@ -53,7 +53,7 @@ public class BoardDao {
 			jdbcUtil.close(pstmt);
 			jdbcUtil.close(conn);
 		}
-
+		
 		return value;
 	} // 글쓰기
 

@@ -74,8 +74,8 @@
 				
 		 --%>
 		 
-		 <fmt:parseNumber var="pageCount" value="${count/boardSize+(count%boardSize==0?0:1)}"/>
-		 <c:set var="pageBlock" value="${5}"/>
+		 <fmt:parseNumber var="pageCount" value="${count/boardSize+(count%boardSize==0?0:1)}" integerOnly="true"/>
+		 <c:set var="pageBlock" value="${3}"/>
 		 
 		 <%-- 페이지번호가 몇까지 보여야할까? --%>
 		 <fmt:parseNumber var="result" value="${(currentPage-1)/pageBlock}" integerOnly="true"/>
